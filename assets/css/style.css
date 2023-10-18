@@ -1384,10 +1384,12 @@ a{
   .slider-container{
     height: 200px;
     width: 285px;
-    /* width: 500px; */
+    width: 320px !important;
     
     /* margin-bottom: 100px; */
-    background-color:#00A78E;
+    background-color: #00A78E;
+    /* background-color: yellow; */
+
     display: flex;
     justify-content: center;
     align-items: center;
