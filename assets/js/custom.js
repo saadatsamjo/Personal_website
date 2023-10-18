@@ -49,7 +49,7 @@ function setcaption(slide_number){
     }else if (slide_number == 2){
         return "On this project, I worked with a team as a product designer, We developed a <a style='color:white; text-decoration:underline;' href='https://www.figma.com/proto/eepQra4vRZievRkic7iV4G/MEST-EIT's-attendance-management?type=design&node-id=310-377&t=vy1zVjEmblGWTuNr-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A3&mode=design' target='_blank'>custom software</a> for MESTafrica, to streamline their communication pipelines and attendance tracking";
     }else if (slide_number == 3){
-        return "I am currently attending an intensive training at MEST, as the training proceeds, i constantly improve my skills increase my efficiency in the software product development domain";
+        return "I am currently attending an intensive training at MEST, as the training proceeds, I constantly improve my skills and increase my efficiency in the software product development domain";
     }
 }
 
