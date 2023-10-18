@@ -1232,9 +1232,6 @@ a{
   border-radius: 8px 8px 8px 0px;
 }
 
-.carousel-container{
-  background-color: aquamarine;
-}
 
 .contact-btn:hover{
   background-color: rgba(0, 167, 142, 0.7);
@@ -1260,7 +1257,7 @@ a{
 }
 
 .slider-div{
-  height: 480px;
+  height: 480px !important;
   padding-top: 40px;
   display: flex;
   justify-content: center;
@@ -1273,19 +1270,18 @@ a{
 
 .slider-container{
   height: 300px;
-  width: 500px;
-  margin-bottom: 400px;
-  /* background-color: yellow; */
+  width: 400px !important;
+  /* margin-bottom: 100px !important; */
+  padding-top: 90px;
+  background-color: #00A78E;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .slider-container img{
-  /* display: block; */
-  /* width: 400px; */
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .slider-container li{
@@ -1405,11 +1401,11 @@ a{
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px){
   html{
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-left: 5px; */
-    flex-direction: column;
+    margin-left: 5px;
+    flex-direction: column; */
   }
 
   .contact-container {
@@ -1552,4 +1548,13 @@ a{
   .contact-btn-tablets{
     display: none;
   }
+}
+
+.footer-name:hover{
+  text-decoration: underline;
+  color: #00A78E;
+}
+.footer-menu-items:hover{
+  /* text-decoration: underline; */
+  color: #00A78E !important;
 }
