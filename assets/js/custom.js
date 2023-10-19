@@ -59,7 +59,7 @@ function setcaption(slide_number){
     }
     
     else if (slide_number == 3){
-        return "I do 3d modeling and animation on blender (entry level skills). I model and animate assets that can be used for game development for indie game studios.";
+        return "I have done few projects on 3d modeling and animation on blender (entry level skills). I model and animate assets that can be used for game development for indie game studios.";
     }
     
     else if (slide_number == 4){
