@@ -1,43 +1,49 @@
-// Get all toggle buttons and forms
-const toggleButtons = document.querySelectorAll(".toggle-form");
-const forms = document.querySelectorAll(".contact-form");
+document.addEventListener("DOMContentLoaded", function () {
+    // Get all toggle buttons and forms
+    const toggleButtons = document.querySelectorAll(".toggle-form");
+    const forms = document.querySelectorAll(".contact-form");
 
-// Function to show a specific form
-function showForm(form) {
-    form.style.display = "block";
-}
-
-// Function to hide all forms
-function hideAllForms() {
-    forms.forEach((form) => {
-        form.style.display = "none";
-    });
-}
-
-// Add click event listeners to all toggle buttons
-toggleButtons.forEach((button) => {
-    button.addEventListener("click", (event) => {
-        const formId = event.target.getAttribute("data-form");
-        const form = document.getElementById(formId);
-
-        hideAllForms();
-        showForm(form);
-    });
-});
-
-// Add a click event listener to the document to hide forms when clicking outside
-document.addEventListener("click", (event) => {
-    if (!event.target.classList.contains("contact-btn")) {
-        hideAllForms();
+    // Function to show a specific form
+    function showForm(form) {
+        form.style.display = "block";
     }
-});
 
-// Prevent the click event on the forms from closing them
-forms.forEach((form) => {
-    form.addEventListener("click", (event) => {
-        event.stopPropagation();
+    // Function to hide all forms
+    function hideAllForms() {
+        forms.forEach((form) => {
+            form.style.display = "none";
+        });
+    }
+
+    // Hide all forms when the page loads
+    hideAllForms();
+
+    // Add click event listeners to all toggle buttons
+    toggleButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            const formId = event.target.getAttribute("data-form");
+            const form = document.getElementById(formId);
+
+            hideAllForms();
+            showForm(form);
+        });
+    });
+
+    // Add a click event listener to the document to hide forms when clicking outside
+    document.addEventListener("click", (event) => {
+        if (!event.target.classList.contains("contact-btn")) {
+            hideAllForms();
+        }
+    });
+
+    // Prevent the click event on the forms from closing them
+    forms.forEach((form) => {
+        form.addEventListener("click", (event) => {
+            event.stopPropagation();
+        });
     });
 });
+
 
 
 //swiper/slider
@@ -46,9 +52,17 @@ let slide_number = 1;
 function setcaption(slide_number){
     if (slide_number == 1){
         return "I designed UI and UX for mobile for <a href='https://www.superleeft.com' style='color:white; text-decoration:underline;' target='_blank'>superleeft,<a> a ride hailing startup in East Africa. I also worked with the team for design thinking and market research during the product development"
-    }else if (slide_number == 2){
+    }
+
+    else if (slide_number == 2){
         return "On this project, I worked with a team as a product designer, We developed a <a style='color:white; text-decoration:underline;' href='https://www.figma.com/proto/eepQra4vRZievRkic7iV4G/MEST-EIT's-attendance-management?type=design&node-id=310-377&t=vy1zVjEmblGWTuNr-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A3&mode=design' target='_blank'>custom software</a> for MESTafrica, to streamline their communication pipelines and attendance tracking";
-    }else if (slide_number == 3){
+    }
+    
+    else if (slide_number == 3){
+        return "I do 3d modeling and animation on blender (entry level skills). I model and animate assets that can be used for game development for indie game studios.";
+    }
+    
+    else if (slide_number == 4){
         return "I am currently attending an intensive training at MEST, as the training proceeds, I constantly improve my skills and increase my efficiency in the software product development domain";
     }
 }
@@ -78,7 +92,7 @@ document.getElementById("prev").addEventListener("click", function(){
 
 // next
 document.getElementById("next").addEventListener("click", function(){
-    slide_number < 3? slide_number = slide_number+1:slide_number = slide_number;
+    slide_number < 4? slide_number = slide_number+1:slide_number = slide_number;
     document.getElementById("slider-image").src = `assets/images/picha${slide_number}.png`;
     document.getElementById("the-caption").innerHTML = setcaption(slide_number);
     var element = document.getElementById("lower-caption");
