@@ -59,7 +59,7 @@ function setcaption(slide_number){
     }
     
     else if (slide_number == 3){
-        return "I have done few projects on 3d modeling and animation on blender (entry level skills). I model and animate assets that can be used for game development for indie game studios.";
+        return "I have done few projects on 3d modeling and animation on blender (entry level skills). I model and animate 3d game assets used for game development, for indie game studios.";
     }
     
     else if (slide_number == 4){
@@ -103,4 +103,43 @@ document.getElementById("next").addEventListener("click", function(){
         element.style.flex = "1";
 })
 
+// Read more and show less
+document.addEventListener("DOMContentLoaded", function () {
+    const readMoreLink = document.getElementById("read-more-text");
+    const moreText = document.getElementById("read-more-paragraph");
+    const dots = document.querySelector(".dots");
+    const dp = document.getElementById("dp");
+    const introductionText = document.getElementById("introduction-text");
+    const readMoreDiv = document.getElementById("read-more-div");
 
+    readMoreLink.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        // Hide the introduction text
+        introductionText.style.display = "none";
+        introductionText.style.marginTop = "0px";
+
+        // Display the "read-more-div" immediately
+        readMoreDiv.style.display = "block";
+        readMoreLink.style.marginTop = "-100px";
+
+        // Check if the text is hidden or not
+        const textIsHidden = moreText.style.display === "none";
+
+        // Hide both the dots and extra text
+        dots.style.display = textIsHidden ? "none" : "inline";
+        moreText.style.display = textIsHidden ? "inline" : "none";
+
+        // Adjust the image margin and text margin based on whether the text is hidden or not
+        dp.style.marginTop = textIsHidden ? "280px" : "50px";
+
+        // Update the "Read More" link text
+        readMoreLink.innerHTML = textIsHidden ? "<a id='show-less' href='index.html'>Show less</a>" : "Read more";
+
+        // Add a click event listener to "Show less" link
+        const showLessLink = document.getElementById("show-less");
+        showLessLink.addEventListener("click", function () {
+            location.reload();
+        });
+    });
+});

@@ -1113,7 +1113,28 @@ p {
 /*# sourceMappingURL=style.css.map */
 
 /* MY CODE */
+.main-btn{
+  margin-bottom: 40px;
+}
+#read-more-text:hover, #show-less:hover{
+  text-decoration: underline;
+  color: #00A78E;
+}
 
+#read-more-paragraph{
+  margin-top: 50px;
+}
+.more-text {
+  display: none;
+}
+
+.read-more {
+  color: #00A78E;
+  cursor: pointer;
+}
+.read-more-div{
+  margin-top: 20px;
+}
 
 .contact-container {
   display: flex;
@@ -1248,7 +1269,7 @@ a{
   text-align: center;
 }
 .portfolio-buttons{
-  margin-top: 10px;
+  margin-top: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1356,6 +1377,9 @@ a{
     padding: 1px 5px 1px 1px;
     white-space: nowrap; 
     
+  }
+  #dp{
+    margin-top: 20px !important;
   }
 
   .about_image{
